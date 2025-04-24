@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Toko BukuKu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #dfe9f3, #ffffff);
+    }
+    .sidebar {
+      height: 100vh;
+      background-color: #1e1e2f;
+      color: white;
+    }
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 12px 20px;
+      transition: all 0.3s;
+    }
+    .sidebar a:hover {
+      background-color: #343a40;
+    }
+    .card-custom {
+      border-left: 5px solid #007bff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card-icon {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="bi bi-book-half me-2"></i>Toko BukuKu</a>
+      <span class="text-white">Halo, Admin!</span>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-2 sidebar pt-4">
+        <h5 class="text-center mb-4">Menu</h5>
+        <a href="#"><i class="bi bi-house-door me-2"></i>Dashboard</a>
+        <a href="#"><i class="bi bi-journal-bookmark me-2"></i>Data Buku</a>
+        <a href="#"><i class="bi bi-tags me-2"></i>Kategori</a>
+        <a href="#"><i class="bi bi-cart me-2"></i>Transaksi</a>
+        <a href="#"><i class="bi bi-graph-up-arrow me-2"></i>Laporan</a>
+        <a href="#"><i class="bi bi-box-arrow-right me-2"></i>Keluar</a>
+      </div>
+
+      <!-- Content -->
+      <div class="col-md-10 p-4">
+        <h2 class="mb-4">Dashboard</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card card-custom">
+              <div class="card-body d-flex align-items-center">
+                <div class="me-3 text-primary card-icon"><i class="bi bi-book"></i></div>
+                <div>
+                  <h5>Total Buku</h5>
+                  <p class="mb-0">120 Buku tersedia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card card-custom border-start-success" style="border-left-color: #28a745;">
+              <div class="card-body d-flex align-items-center">
+                <div class="me-3 text-success card-icon"><i class="bi bi-cart-check"></i></div>
+                <div>
+                  <h5>Penjualan Hari Ini</h5>
+                  <p class="mb-0">25 Transaksi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card card-custom border-start-warning" style="border-left-color: #ffc107;">
+              <div class="card-body d-flex align-items-center">
+                <div class="me-3 text-warning card-icon"><i class="bi bi-people"></i></div>
+                <div>
+                  <h5>Pengguna Terdaftar</h5>
+                  <p class="mb-0">45 Pengguna aktif</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End content -->
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
