@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halaman Login & Register</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .wrapper {
+      display: flex;
+      gap: 50px;
+      padding: 40px;
+    }
+
+    .box {
+      background-color: #ffffff;
+      width: 350px;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .box h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .box input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .box button:hover {
+      background-color: #2980b9;
+    }
+
+    @media (max-width: 800px) {
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <!-- Kotak Login -->
+    <div class="box">
+      <h2>Login</h2>
+      <form action="#" method="POST">
+        <input type="text" name="username" placeholder="Nama Pengguna" required>
+        <input type="password" name="password" placeholder="Kata Sandi" required>
+        <button type="submit">Masuk</button>
+      </form>
+    </div>
+
+    <!-- Kotak Register -->
+    <div class="box">
+      <h2>Daftar</h2>
+      <form action="#" method="POST">
+        <input type="text" name="fullname" placeholder="Nama Lengkap" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="username" placeholder="Nama Pengguna" required>
+        <input type="password" name="password" placeholder="Kata Sandi" required>
+        <button type="submit">Daftar</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
