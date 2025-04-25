@@ -3,101 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Halaman Login & Register</title>
+  <title>Login - Toko BukuKu</title>
   <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #74ebd5, #acb6e5);
-      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f8fe;
+    }
+    .auth-body {
+      background: #f5f8fe;
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100vh;
     }
-
-    .wrapper {
-      display: flex;
-      gap: 50px;
-      padding: 40px;
-    }
-
-    .box {
-      background-color: #ffffff;
-      width: 350px;
-      padding: 30px 25px;
+    .auth-container {
+      background: white;
+      padding: 30px 40px;
       border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
     }
-
-    .box h2 {
+    .auth-container h2 {
+      margin-bottom: 20px;
       text-align: center;
-      margin-bottom: 25px;
-      color: #333;
     }
-
-    .box input {
+    .auth-container label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    .auth-container input {
       width: 100%;
-      padding: 12px;
-      margin-bottom: 18px;
+      padding: 10px;
       border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
+      border-radius: 8px;
     }
-
-    .box button {
+    .auth-container button {
+      margin-top: 20px;
       width: 100%;
-      padding: 12px;
-      background-color: #3498db;
-      color: #fff;
+      padding: 10px;
+      background-color: #1e88e5;
       border: none;
-      border-radius: 6px;
+      color: white;
       font-size: 16px;
+      border-radius: 8px;
       cursor: pointer;
     }
-
-    .box button:hover {
-      background-color: #2980b9;
+    .auth-container button:hover {
+      background-color: #1565c0;
     }
-
-    @media (max-width: 800px) {
-      .wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-      }
+    .auth-container p {
+      text-align: center;
+      margin-top: 15px;
     }
   </style>
 </head>
-<body>
+<body class="auth-body">
+  <div class="auth-container">
+    <h2>Login Admin</h2>
+    <form action="dashboard.html" method="post">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required/>
 
-  <div class="wrapper">
-    <!-- Kotak Login -->
-    <div class="box">
-      <h2>Login</h2>
-      <form action="#" method="POST">
-        <input type="text" name="username" placeholder="Nama Pengguna" required>
-        <input type="password" name="password" placeholder="Kata Sandi" required>
-        <button type="submit">Masuk</button>
-      </form>
-    </div>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required/>
 
-    <!-- Kotak Register -->
-    <div class="box">
-      <h2>Daftar</h2>
-      <form action="#" method="POST">
-        <input type="text" name="fullname" placeholder="Nama Lengkap" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="text" name="username" placeholder="Nama Pengguna" required>
-        <input type="password" name="password" placeholder="Kata Sandi" required>
-        <button type="submit">Daftar</button>
-      </form>
-    </div>
+      <button type="submit">Login</button>
+      <p>Belum punya akun? <a href="register.html">Daftar</a></p>
+    </form>
   </div>
-
 </body>
 </html>
