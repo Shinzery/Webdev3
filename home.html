@@ -1,85 +1,81 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toko Buku</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-    <style>
-      body {
-        font-family: 'Poppins', sans-serif;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda - Toko BukuKu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f8fe;
+    }
 
-      :root {
-        --olive: #708238;
-        --olive-light: #A6B880;
-        --overlay: rgba(0, 0, 0, 0.5);
-      }
-    </style>
-  </head>
-  <body class="bg-white text-gray-800">
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      background: #1e1e2f;
+      color: white;
+      padding-top: 20px;
+      position: fixed;
+    }
 
-    <!-- Header -->
-    <header class="py-6 bg-white shadow-lg fixed top-0 w-full z-50">
-      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-[var(--olive)]">Toko Buku</h1>
-        <nav class="space-x-6 text-sm text-gray-700">
-          <a href="#" class="hover:text-[var(--olive)] transition">Beranda</a>
-          <a href="#" class="hover:text-[var(--olive)] transition">Kategori</a>
-          <a href="#" class="hover:text-[var(--olive)] transition">Kontak</a>
-        </nav>
-      </div>
-    </header>
+    .sidebar .logo {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
 
-    <!-- Hero Section -->
-    <section class="relative h-[80vh] bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794');">
-      <div class="absolute inset-0 bg-black/60"></div>
-      <div class="relative z-10 text-center px-6">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Temukan Buku Favoritmu</h2>
-        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6">Dari klasik hingga bestseller modern. Semua ada di sini.</p>
-        <a href="#" class="bg-[var(--olive)] hover:bg-green-700 transition px-6 py-3 rounded-full text-white font-medium">Jelajahi Sekarang</a>
-      </div>
-    </section>
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-    <!-- Buku Unggulan -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-6">
-        <h3 class="text-3xl font-semibold text-center text-[var(--olive)] mb-12">Buku Unggulan</h3>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
-          <!-- Card -->
-          <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
-            <img src="https://via.placeholder.com/400x250" class="w-full object-cover h-56" alt="buku1" />
-            <div class="p-5">
-              <h4 class="text-xl font-semibold mb-1">Laskar Pelangi</h4>
-              <p class="text-sm text-gray-500">Andrea Hirata</p>
-            </div>
-          </div>
-          <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
-            <img src="https://via.placeholder.com/400x250" class="w-full object-cover h-56" alt="buku2" />
-            <div class="p-5">
-              <h4 class="text-xl font-semibold mb-1">Bumi Manusia</h4>
-              <p class="text-sm text-gray-500">Pramoedya Ananta Toer</p>
-            </div>
-          </div>
-          <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
-            <img src="https://via.placeholder.com/400x250" class="w-full object-cover h-56" alt="buku3" />
-            <div class="p-5">
-              <h4 class="text-xl font-semibold mb-1">Negeri 5 Menara</h4>
-              <p class="text-sm text-gray-500">Ahmad Fuadi</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    .sidebar ul li {
+      padding: 15px;
+    }
 
-    <!-- Footer -->
-    <footer class="bg-[var(--olive)] text-white py-8 mt-10">
-      <div class="max-w-7xl mx-auto px-6 text-center text-sm">
-        &copy; 2025 Toko Buku. All rights reserved.
-      </div>
-    </footer>
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
 
-  </body>
+    .sidebar ul li a:hover {
+      background: #29293d;
+      border-radius: 5px;
+    }
+
+    .main {
+      margin-left: 240px;
+      padding: 30px;
+    }
+
+    .main h1 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    .main p {
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2 class="logo">Toko BukuKu</h2>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="#">Tentang Kami</a></li>
+      <li><a href="#">Kontak</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h1>Selamat Datang di Toko BukuKu!</h1>
+    <p>Platform untuk mengelola penjualan dan stok buku dengan mudah dan efisien.</p>
+  </div>
+</body>
 </html>
- 
