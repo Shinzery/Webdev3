@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Toko BukuKu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f8fe;
+    }
+    .auth-body {
+      background: #f5f8fe;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .auth-container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    .auth-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .auth-container label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    .auth-container input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .auth-container button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #1e88e5;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .auth-container button:hover {
+      background-color: #1565c0;
+    }
+    .auth-container p {
+      text-align: center;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body class="auth-body">
+  <div class="auth-container">
+    <h2>Registrasi Admin</h2>
+    <form action="login.html" method="post">
+      <label for="fullname">Nama Lengkap</label>
+      <input type="text" id="fullname" name="fullname" required/>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required/>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required/>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required/>
+
+      <button type="submit">Daftar</button>
+      <p>Sudah punya akun? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+</body>
+</html>
